@@ -1092,7 +1092,7 @@ var trigger_spray = function () {
     chain.run();
 
     //Trigger OOB
-    alert("\nQuase pronto!!! Agora siga os passos abaixo para a exploração do kernel:\n\n1. Insira o USB com o arquivo exfathax.img. \n2. Após \"2s\" da notificação \"...USB é incompatível\", clique em OK. \n3. Após carregar o Goldhen, fechar o navegador e remova o USB.");
+    alert("\nQuase pronto!!! Agora siga os passos abaixo para concluir o desbloqueio:\n\n1. Insira o USB com o arquivo exfathax.img. \n2. Após \"2s\" da notificação \"...USB é incompatível\", clique em OK. \n3. Após carregar o Goldhen, fechar o navegador e remova o USB.");
     //Trigger corrupt knote
     {
         for (var i = 1; i < NUM_KQUEUES; i += 2) {
@@ -1103,7 +1103,7 @@ var trigger_spray = function () {
     if (chain.syscall(23, 0).low == 0) {
         return;
     }
-    alert("A exploração do kernel FALHOU!!! Feche o navegador e\nrefaça \"TODO PROCESSO\", inclusive excluindo cookies e dados de sites.\n\nObservações:\nSó conecte o USB quando for solicitado.\nVerifeque se USB ficou bem conectado, permanecendo a falha,\npode ser que o USB esteja corrompido, reescreva a imagem.");
+    alert("O desbloqueio FALHOU!!! Feche o navegador e\nrefaça \"TODO PROCESSO\", inclusive excluindo cookies e dados de sites.\n\nObservações:\nSó conecte o USB quando for solicitado.\nVerifeque se USB ficou bem conectado, permanecendo a falha,\npode ser que o USB esteja corrompido, reescreva a imagem.");
     p.write8(0, 0);
     return;
 }
